@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024国考资料分享</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #666;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            width: 90%;
+            padding: 12px 0;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: red;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="mainContent">
+        <h1>2024 国考资料分享</h1>
+        <p>输入你的姓名以验证资格后获取下载链接</p>
+        <input id="nameInput" type="text" placeholder="请输入姓名" />
+        <button onclick="showResult()">获取资料</button>
+        <div id="result"></div>
+        <div class="footer">本站由国家公务员考试服务中心提供</div>
+    </div>
+
+    <script>
+        function showResult() {
+            // 获取用户输入的姓名
+            const name = document.getElementById("nameInput").value.trim();
+
+            if (name === "") {
+                alert("请输入姓名以继续！");
+                return;
+            }
+
+            // 获取容器元素
+            const container = document.getElementById("mainContent");
+
+            // 替换整个页面内容
+            container.innerHTML = `
+                <h1 style="color: red;">上当啦！🎉</h1>
+                <p style="font-size: 20px;">亲爱的 <b>${name}</b>，你真的信了？😂</p>
+                <p>不过，祝你一定能考上公务员！💪</p>
+                <button onclick="location.reload()">返回首页</button>
+            `;
+        }
+    </script>
+</body>
+</html>
